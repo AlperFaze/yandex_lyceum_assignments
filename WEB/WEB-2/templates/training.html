@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if "инженер" in profession or "строитель" in profession %}
+        <h3>Инженерные тренажеры</h3>
+        <img src="{{url_for('static', filename='img/IT.png')}}" alt="Picture" class="img-fluid">
+
+
+    {% else %}
+        <h3>Научные симуляторы</h3>
+        <img src="{{url_for('static', filename='img/NS.png')}}" alt="Picture" class="img-fluid">
+
+    {% endif %}
+
+{% endblock %}
